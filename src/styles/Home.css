@@ -1,0 +1,160 @@
+/* src/styles/Home.css */
+
+.home-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the card size */
+    gap: 2rem; /* Increased gap between cards */
+    justify-items: center;
+    padding: 1rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .card p {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Add deeper shadow */
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .card:hover:before {
+    opacity: 0.1; /* Light background on hover */
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    width: 90%; /* Make the popup modal larger */
+    max-width: 800px; /* Wider maximum size */
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative; /* Allows positioning the close button */
+  }
+  
+  .modal-content h2 {
+    font-size: 2.5rem; /* Adjusted for larger modal */
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .modal-content p {
+    font-size: 1.2rem;
+    color: #34495e;
+    line-height: 1.8; /* Increased line height for readability */
+  }
+  
+  .close-btn {
+    position: absolute; /* Move the close button to the top-right */
+    top: 1rem; /* Distance from the top */
+    right: 1rem; /* Distance from the right */
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 1rem; /* Increased padding for larger clickable area */
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Increased font size for better visibility */
+    width: 3rem; /* Larger button */
+    height: 3rem; /* Circular button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    .modal-content h2 {
+      font-size: 2rem;
+    }
+  
+    .modal-content p {
+      font-size: 1rem;
+    }
+  
+    .close-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1rem;
+    }
+  }
+  
+  
